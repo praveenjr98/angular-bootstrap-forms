@@ -10,7 +10,7 @@
         required #name="ngModel"
         [class.is-invalid]="name.invalid && name.touched"
       />
-      <small [class.d-none]="name.valid || name.untouched">Enter the email id...
+      <small class="text-danger" [class.d-none]="name.valid || name.untouched">Enter the email id...
       </small>
     </div>
     <div class="form-group">
@@ -23,7 +23,7 @@
         required #password ="ngModel"
         [class.is-invalid]="password.invalid && password.touched"
       />
-      <small [class.d-none]="password.valid || password.untouched">enter the password...</small>
+      <small class="text-danger" [class.d-none]="password.valid || password.untouched">enter the password...</small>
     </div>
     <button class="btn btn-primary">Sign-in</button>
   </form>
