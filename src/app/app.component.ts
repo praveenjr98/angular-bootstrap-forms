@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Login } from './login';
 
 @Component({
   selector: 'my-app',
@@ -10,4 +11,6 @@ export class AppComponent  {
   clickMe(){
     alert("Bootstap working");
   }
+  obj = new Login('eminem','eminem@123');
 }
+
