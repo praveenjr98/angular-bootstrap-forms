@@ -11,6 +11,6 @@ export class AppComponent  {
   clickMe(){
     alert("Bootstap working");
   }
-  obj = new Login('eminem','eminem@123');
+  obj = new Login('','');
 }
 

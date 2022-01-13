@@ -1,13 +1,13 @@
 <div class="container-fluid">
   <form #loginForm="ngForm">
     <div class="form-group">
-      {{name.className}}
       <label>UserName</label>&nbsp;
       <input
         type="email"
         class="form-control"
         name="username"
-        required #name
+        required #name="ngModel"
+        [class.is-invalid]="name.invalid && name.touched"
         [(ngModel)]="obj.username"
       />
     </div>
@@ -18,6 +18,8 @@
         class="form-control"
         name="password"
         [(ngModel)]="obj.password"
+        required #password ="ngModel"
+        [class.is-invalid]="password.invalid && password.touched"
       />
     </div>
     <button class="btn btn-primary">Sign-in</button>
