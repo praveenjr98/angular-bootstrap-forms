@@ -1,13 +1,13 @@
 <div class="container-fluid">
   <form #loginForm="ngForm">
-    {{ loginForm.value | json }}
-    {{ obj | json }}
     <div class="form-group">
+      {{name.className}}
       <label>UserName</label>&nbsp;
       <input
         type="email"
         class="form-control"
         name="username"
+        required #name
         [(ngModel)]="obj.username"
       />
     </div>
