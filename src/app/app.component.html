@@ -1,9 +1,32 @@
-<div class="container-fluid">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login page</title> 
+</head>
+<body>
+
+<div class="col1">
+  <div class="content1">
+
+  <h1>software that grows with your business</h1>
+  </div>
+  </div>
+<div class="col2">
+<div class="content2">
+  <img src="https://cdns.apptivo.com/res/cdn/app/login_signup/apptivo-circle-logo_1.png"><br><br>
+<p>sign in to your Account</p>
+</div>
+<div class="container">
   <form #loginForm="ngForm">
-    <div class="form-group">
-      <label>UserName</label>&nbsp;
+    <div class="form-group"> 
       <input
         type="email"
+        placeholder="Enter the email..."
+        id="email_password"
+
         class="form-control"
         name="username"
         [(ngModel)]="obj.username"
@@ -14,17 +37,25 @@
       </small>
     </div>
     <div class="form-group">
-      <label>Password</label>&nbsp;
+    <br>
       <input
         type="password"
+        placeholder="Enter the password..."
+        id="email_password"
         class="form-control"
+
         name="password"
         [(ngModel)]="obj.password"
         required #password ="ngModel"
         [class.is-invalid]="password.invalid && password.touched"
       />
       <small class="text-danger" [class.d-none]="password.valid || password.untouched">enter the password...</small>
-    </div>
-    <button class="btn btn-primary">Sign-in</button>
+    </div><br><br>
+    <button class="btn btn-primary btn btn-block">Sign-in</button><br><br>
+    <a href="forgotPassword">Forgot Password?</a>
   </form>
 </div>
+</div>
+
+</body>
+</html>
