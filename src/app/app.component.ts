@@ -12,5 +12,8 @@ export class AppComponent  {
     alert("Bootstap working");
   }
   obj = new Login('','');
+  onSubmit(){
+    console.log(this.obj);
+  }
 }
 
